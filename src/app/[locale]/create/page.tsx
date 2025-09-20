@@ -54,7 +54,7 @@ export default function CreatePact() {
     if (!isConnected) return;
 
     const durationInSeconds = BigInt(formData.duration) * BigInt(86400);
-    const stakeInWei = parseEther(formData.stake as `${number}`);
+    const stakeInWei = parseEther(formData.stake as `${number}`); // Convert MON to wei
 
     // Call the contract
     writeContract({
@@ -211,33 +211,46 @@ export default function CreatePact() {
             </div>
 
             {/* --- Notification Area --- */}
-            <div className="h-10 text-center">
+            <div className="min-h-[60px] w-full">
               {isPending && (
-                <div className="text-gray-600 dark:text-gray-300">
-                  请在钱包中确认...
+                <div className="flex items-center gap-3 text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 px-4 py-3 rounded-lg border border-amber-200 dark:border-amber-800">
+                  <div className="w-4 h-4 border-2 border-amber-600 border-t-transparent rounded-full animate-spin"></div>
+                  <span className="text-sm font-medium">{t("create.notifications.pending")}</span>
                 </div>
               )}
               {isConfirming && (
-                <div className="text-blue-600 dark:text-blue-400">
-                  正在创建契约，等待区块链确认...
+                <div className="flex items-center gap-3 text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-4 py-3 rounded-lg border border-blue-200 dark:border-blue-800">
+                  <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                  <span className="text-sm font-medium">{t("create.notifications.confirming")}</span>
                 </div>
               )}
               {isConfirmed && (
-                <div className="text-green-600 dark:text-green-400">
-                  <p>契约创建成功！</p>
+                <div className="flex flex-col items-center gap-3 text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-4 py-3 rounded-lg border border-green-200 dark:border-green-800">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm font-medium">{t("create.notifications.success")}</span>
+                  </div>
                   <a
                     href={`${MONAD_EXPLORER_URL}/tx/${hash}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:opacity-80"
+                    className="text-xs underline hover:opacity-80 transition-opacity"
                   >
-                    查看交易详情
+                    {t("create.notifications.viewTransaction")}
                   </a>
                 </div>
               )}
               {error && (
-                <div className="text-red-500 text-sm break-words">
-                  错误: {(error as any).shortMessage || error.message}
+                <div className="flex items-center gap-3 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-4 py-3 rounded-lg border border-red-200 dark:border-red-800">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                  <div className="text-sm break-words">
+                    <span className="font-medium">{t("create.notifications.error")}: </span>
+                    <span>{(error as any).shortMessage || error.message}</span>
+                  </div>
                 </div>
               )}
             </div>

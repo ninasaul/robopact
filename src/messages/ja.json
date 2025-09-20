@@ -53,6 +53,13 @@
       "submit": {
         "create": "契約を作成",
         "creating": "作成中..."
+      },
+      "notifications": {
+        "pending": "ウォレットでトランザクションを確認してください...",
+        "confirming": "契約を作成中、ブロックチェーンの確認を待機中...",
+        "success": "契約が正常に作成されました！",
+        "viewTransaction": "トランザクション詳細を表示",
+        "error": "エラー"
       }
     },
     "warning": {

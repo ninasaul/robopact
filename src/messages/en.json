@@ -54,6 +54,13 @@
         "create": "Create Pact",
         "creating": "Creating...",
         "featureComingSoon": "Pact creation feature coming soon!"
+      },
+      "notifications": {
+        "pending": "Please confirm the transaction in your wallet...",
+        "confirming": "Creating pact, waiting for blockchain confirmation...",
+        "success": "Pact created successfully!",
+        "viewTransaction": "View Transaction Details",
+        "error": "Error"
       }
     },
     "warning": {

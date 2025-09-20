@@ -53,6 +53,13 @@
       "submit": {
         "create": "Créer le Pacte",
         "creating": "Création..."
+      },
+      "notifications": {
+        "pending": "Veuillez confirmer la transaction dans votre portefeuille...",
+        "confirming": "Création du pacte en cours, attente de confirmation blockchain...",
+        "success": "Pacte créé avec succès !",
+        "viewTransaction": "Voir les détails de la transaction",
+        "error": "Erreur"
       }
     },
     "warning": {

@@ -53,6 +53,13 @@
       "submit": {
         "create": "계약 생성",
         "creating": "생성 중..."
+      },
+      "notifications": {
+        "pending": "지갑에서 트랜잭션을 확인해주세요...",
+        "confirming": "계약 생성 중, 블록체인 확인 대기 중...",
+        "success": "계약이 성공적으로 생성되었습니다!",
+        "viewTransaction": "트랜잭션 세부 정보 보기",
+        "error": "오류"
       }
     },
     "warning": {

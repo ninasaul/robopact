@@ -54,6 +54,13 @@
         "create": "创建契约",
         "creating": "创建中...",
         "featureComingSoon": "契约创建功能即将实现！"
+      },
+      "notifications": {
+        "pending": "请在钱包中确认交易...",
+        "confirming": "正在创建契约，等待区块链确认...",
+        "success": "契约创建成功！",
+        "viewTransaction": "查看交易详情",
+        "error": "错误"
       }
     },
     "warning": {
