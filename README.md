@@ -1,110 +1,149 @@
-# 🤖 RoboPact - 机器人契约
+# 🤖 RoboPact - Robot Pact
 
-一个自动执行、带有经济惩罚的链上承诺协议，用无法篡改的智能合约帮助人们战胜拖延、信守承诺。
+An automatically executed, economically penalized on-chain commitment protocol that helps people overcome procrastination and keep promises through tamper-proof smart contracts.
 
-## 项目简介
+## Project Overview
 
-RoboPact 是一个基于区块链的承诺执行系统，通过智能合约实现：
+RoboPact is a blockchain-based commitment execution system that implements:
 
-- **快速裁决**: 通过巧妙的链上博弈机制实现快速、公平的裁决
-- **无法篡改**: 基于智能合约，所有承诺都记录在区块链上
-- **经济激励**: 真金白银的押金机制，让承诺更有分量
+- **Fast Arbitration**: Achieves fast and fair arbitration through ingenious on-chain game mechanisms
+- **Tamper-Proof**: Based on smart contracts, all commitments are recorded on the blockchain
+- **Economic Incentive**: Real money deposit mechanism makes commitments more meaningful
 
-## 技术栈
+## Tech Stack
 
-- **前端**: Next.js 15 + TypeScript
-- **样式**: Tailwind CSS v4
-- **状态管理**: Zustand
-- **钱包连接**: Wagmi + RainbowKit
-- **合约交互**: Viem
-- **智能合约**: Solidity (Foundry/Hardhat)
+- **Frontend**: Next.js 15 + TypeScript
+- **Styling**: Tailwind CSS v4
+- **State Management**: Zustand
+- **Wallet Connection**: Wagmi + RainbowKit
+- **Contract Interaction**: Viem
+- **Smart Contracts**: Solidity (Foundry/Hardhat)
 
-## 快速开始
+## Quick Start
 
-### 1. 安装依赖
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 2. 环境配置
+### 2. Environment Configuration
 
-创建 `.env.local` 文件并配置以下环境变量：
+Create a `.env.local` file and configure the following environment variables:
 
 ```env
 # WalletConnect Project ID
 NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your_project_id_here
 
-# 智能合约地址
+# Smart Contract Address
 NEXT_PUBLIC_CONTRACT_ADDRESS=0x...
 
-# 网络配置
-NEXT_PUBLIC_CHAIN_ID=11155111
+# Network Configuration
+NEXT_PUBLIC_CHAIN_ID=10143
 ```
 
-### 3. 启动开发服务器
+### 3. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-访问 [http://localhost:3000](http://localhost:3000) 查看应用。
+Visit [http://localhost:3000](http://localhost:3000) to view the application.
 
-## 功能特性
+## Features
 
-### 已实现
-- ✅ 钱包连接 (RainbowKit)
-- ✅ 响应式 UI 设计
-- ✅ 创建契约页面
-- ✅ 契约列表页面
-- ✅ 状态管理 (Zustand)
-- ✅ 基础合约接口
+### Implemented
 
-### 待实现
-- ⏳ 智能合约部署
-- ⏳ 合约交互逻辑
-- ⏳ 实时数据同步
-- ⏳ 交易状态处理
+- ✅ Wallet Connection (RainbowKit)
+- ✅ Responsive UI Design
+- ✅ Create Pact Page
+- ✅ Pact List Page
+- ✅ State Management (Zustand)
+- ✅ Basic Contract Interface
+- ✅ Multi-language Support (i18n)
+- ✅ Monad Testnet Integration
 
-## 项目结构
+### To Be Implemented
 
-```
+- ⏳ Smart Contract Deployment
+- ⏳ Contract Interaction Logic
+- ⏳ Real-time Data Synchronization
+- ⏳ Transaction Status Handling
+
+## Project Structure
+
+```text
 src/
 ├── app/                    # Next.js App Router
-│   ├── create/            # 创建契约页面
-│   ├── pacts/             # 契约列表页面
-│   ├── layout.tsx         # 根布局
-│   ├── page.tsx           # 首页
-│   └── providers.tsx      # 全局 Providers
-├── lib/                   # 工具库
-│   ├── contract.ts        # 合约接口定义
-│   └── wagmi.ts          # Wagmi 配置
-└── store/                 # 状态管理
-    └── pactStore.ts       # 契约状态
+│   ├── [locale]/          # Internationalized routes
+│   │   ├── create/        # Create pact page
+│   │   ├── pacts/         # Pact list page
+│   │   ├── layout.tsx     # Locale layout
+│   │   └── page.tsx       # Home page
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Root redirect
+│   └── providers.tsx      # Global Providers
+├── components/             # Reusable components
+│   ├── Header.tsx         # Header component
+│   ├── Footer.tsx         # Footer component
+│   ├── LanguageSwitcher.tsx # Language switcher
+│   └── CustomConnectButton.tsx # Custom connect button
+├── lib/                   # Utility libraries
+│   ├── contract.ts        # Contract interface definitions
+│   ├── wagmi.ts          # Wagmi configuration
+│   └── routing.ts        # Routing utilities
+├── messages/              # Internationalization files
+│   ├── en.json           # English translations
+│   ├── zh.json           # Chinese translations
+│   ├── fr.json           # French translations
+│   ├── ja.json           # Japanese translations
+│   ├── ko.json           # Korean translations
+│   └── th.json           # Thai translations
+└── store/                 # State management
+    └── pactStore.ts       # Pact state
 ```
 
-## 开发计划
+## Development Roadmap
 
-根据项目大纲，开发分为以下阶段：
+Based on the project outline, development is divided into the following phases:
 
-### 上午：核心合约开发
-- [ ] 环境搭建与合约设计
-- [ ] 合约编码与单元测试
-- [ ] 部署与验证
+### Morning: Core Contract Development
 
-### 下午：前端开发与集成
-- [ ] 页面框架搭建
-- [ ] 创建契约页面开发
-- [ ] 契约列表页面开发
+- [ ] Environment setup and contract design
+- [ ] Contract coding and unit testing
+- [ ] Deployment and verification
 
-### 晚上：测试、打磨与演讲准备
-- [ ] 端到端测试与修复
-- [ ] 准备 Pitch & Demo
+### Afternoon: Frontend Development and Integration
 
-## 贡献
+- [ ] Page framework setup
+- [ ] Create pact page development
+- [ ] Pact list page development
 
-欢迎提交 Issue 和 Pull Request！
+### Evening: Testing, Refinement and Presentation Preparation
 
-## 许可证
+- [ ] End-to-end testing and fixes
+- [ ] Pitch & Demo preparation
+
+## Supported Languages
+
+- 🇺🇸 English
+- 🇨🇳 简体中文 (Simplified Chinese)
+- 🇫🇷 Français (French)
+- 🇯🇵 日本語 (Japanese)
+- 🇰🇷 한국어 (Korean)
+- 🇹🇭 ไทย (Thai)
+
+## Network Support
+
+- **Monad Testnet** (Primary): Chain ID 10143
+- Ethereum Mainnet: Chain ID 1
+- Sepolia Testnet: Chain ID 11155111
+- Hardhat Local: Chain ID 31337
+
+## Contributing
+
+Issues and Pull Requests are welcome!
+
+## License
 
 MIT License
