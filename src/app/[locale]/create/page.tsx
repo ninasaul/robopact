@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useAccount, useWriteContract } from 'wagmi';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { CustomConnectButton } from '@/components/CustomConnectButton';
 import { useTranslations } from 'next-intl';
 
 export default function CreatePact() {
@@ -45,7 +45,9 @@ export default function CreatePact() {
           <p className="text-gray-600 dark:text-gray-300 mb-8">
             {t('create.connectWallet.description')}
           </p>
-          <ConnectButton />
+          <div className="flex justify-center">
+            <CustomConnectButton />
+          </div>
         </div>
       </div>
     );
