@@ -44,7 +44,7 @@
         "placeholder": "0x..."
       },
       "stake": {
-        "label": "Stake Amount (ETH)",
+        "label": "Stake Amount (MON)",
         "placeholder": "0.01"
       },
       "duration": {

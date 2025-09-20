@@ -44,7 +44,7 @@
         "placeholder": "0x..."
       },
       "stake": {
-        "label": "스테이크 금액 (ETH)",
+        "label": "스테이크 금액 (MON)",
         "placeholder": "0.01"
       },
       "duration": {

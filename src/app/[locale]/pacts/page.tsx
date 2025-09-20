@@ -153,7 +153,7 @@ export default function PactsPage() {
                           {pact.description}
                         </h3>
                         <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
-                          <span>{t('pacts.pact.stake')}: {pact.stake} ETH</span>
+                          <span>{t('pacts.pact.stake')}: {pact.stake} MON</span>
                           <span>•</span>
                           <span>{t('pacts.pact.opponent')}: {pact.opponent.slice(0, 6)}...{pact.opponent.slice(-4)}</span>
                         </div>

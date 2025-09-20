@@ -44,7 +44,7 @@
         "placeholder": "0x..."
       },
       "stake": {
-        "label": "Montant de la Mise (ETH)",
+        "label": "Montant de la Mise (MON)",
         "placeholder": "0.01"
       },
       "duration": {

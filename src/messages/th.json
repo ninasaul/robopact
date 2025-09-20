@@ -44,7 +44,7 @@
         "placeholder": "0x..."
       },
       "stake": {
-        "label": "จำนวนเงินเดิมพัน (ETH)",
+        "label": "จำนวนเงินเดิมพัน (MON)",
         "placeholder": "0.01"
       },
       "duration": {

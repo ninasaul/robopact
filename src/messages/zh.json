@@ -44,7 +44,7 @@
         "placeholder": "0x..."
       },
       "stake": {
-        "label": "押金金额 (ETH)",
+        "label": "押金金额 (MON)",
         "placeholder": "0.01"
       },
       "duration": {
