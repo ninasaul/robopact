@@ -15,7 +15,7 @@ import { parseEther } from "viem";
 import RoboPactAbi from "@/utils/abi/RoboPact.json";
 
 // 2. 定义合约地址和浏览器 URL
-const ROBO_PACT_CONTRACT_ADDRESS = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"; // <-- 本地测试地址, 部署后请替换
+const ROBO_PACT_CONTRACT_ADDRESS = "0x8F19309B7e16e3414C679F9af495338A2ff7F6d0"; // <-- 本地测试地址, 部署后请替换
 const MONAD_EXPLORER_URL = "https://testnet.monadexplorer.com";
 
 export default function CreatePact() {
