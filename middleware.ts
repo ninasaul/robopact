@@ -3,18 +3,7 @@ import { locales, defaultLocale } from './src/i18n';
 import { NextRequest } from 'next/server';
 
 export default function middleware(request: NextRequest) {
-  // 检查是否有语言偏好参数
-  const url = request.nextUrl.clone();
-  const locale = url.searchParams.get('locale');
-  
-  // 如果有 locale 参数，重定向到对应的语言路径
-  if (locale && locales.includes(locale as any)) {
-    url.searchParams.delete('locale');
-    url.pathname = `/${locale}${url.pathname}`;
-    return Response.redirect(url);
-  }
-
-  // 使用 next-intl 的默认中间件处理其他情况
+  // 使用 next-intl 的默认中间件处理所有情况
   const intlMiddleware = createMiddleware({
     // 支持的语言列表
     locales,

@@ -116,7 +116,7 @@ export default function PactsPage() {
             </h1>
             <Link
               href={getLocalizedPath('/create', locale)}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors cursor-pointer"
             >
               {t('pacts.createNew')}
             </Link>
@@ -133,7 +133,7 @@ export default function PactsPage() {
               </p>
               <Link
                 href={getLocalizedPath('/create', locale)}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors cursor-pointer"
               >
                 {t('pacts.empty.createButton')}
               </Link>
@@ -175,7 +175,7 @@ export default function PactsPage() {
                       <div className="flex space-x-2">
                         {!isExpired && !pact.resolved && (
                           <button
-                            className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                            className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors cursor-pointer"
                             onClick={() => {
                               // TODO: 调用 markAsFinished 函数
                               alert(t('pacts.actions.markCompleteAlert'));
@@ -187,7 +187,7 @@ export default function PactsPage() {
                         
                         {isExpired && !pact.resolved && (
                           <button
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                            className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors cursor-pointer"
                             onClick={() => {
                               // TODO: 调用 resolvePact 函数
                               alert(t('pacts.actions.resolveAlert'));

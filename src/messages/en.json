@@ -13,6 +13,8 @@
     "description": "We created a robot arbitrator that helps people overcome procrastination and keep their promises through immutable smart contracts"
   },
   "features": {
+    "title": "Core Features",
+    "description": "Every promise is a beginning of growth, every commitment deserves to be witnessed",
     "fastArbitration": {
       "title": "Fast Arbitration",
       "description": "Achieve fast and fair arbitration through ingenious on-chain game mechanisms"

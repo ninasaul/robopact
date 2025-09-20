@@ -13,6 +13,8 @@
     "description": "我们创造了一个机器人仲裁者，用无法篡改的智能合约帮助人们战胜拖延、信守承诺"
   },
   "features": {
+    "title": "核心特性",
+    "description": "每一份承诺都是成长的开始，每一份坚持都值得被看见",
     "fastArbitration": {
       "title": "快速裁决",
       "description": "通过巧妙的链上博弈机制实现快速、公平的裁决"

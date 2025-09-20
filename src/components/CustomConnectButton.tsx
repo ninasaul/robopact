@@ -24,7 +24,7 @@ export function CustomConnectButton() {
           chain &&
           (!authenticationStatus || authenticationStatus === 'authenticated');
 
-        const buttonClassName = "flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-medium";
+        const buttonClassName = "flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer font-medium";
 
         return (
           <div
@@ -52,7 +52,7 @@ export function CustomConnectButton() {
 
               if (chain.unsupported) {
                 return (
-                  <button onClick={openChainModal} type="button" className={`${buttonClassName} border-red-300 dark:border-red-600 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20`}>
+                  <button onClick={openChainModal} type="button" className={`${buttonClassName} text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20`}>
                     <span className="text-xs font-bold px-1.5 py-0.5 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded">
                       !
                     </span>

@@ -143,7 +143,7 @@ export default function CreatePact() {
               <button
                 type="submit"
                 disabled={isPending}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-4 rounded-md transition-colors"
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-4 rounded-md transition-colors cursor-pointer disabled:cursor-not-allowed"
               >
 {isPending ? t('create.form.submit.creating') : t('create.form.submit.create')}
               </button>
