@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "RoboPact - Pacte Robot",
+    "description": "Un protocole d'engagement en chaîne exécuté automatiquement avec des pénalités économiques, aidant les gens à surmonter la procrastination et à tenir leurs promesses grâce à des contrats intelligents immuables."
+  },
+  "navigation": {
+    "createPact": "Créer un Pacte",
+    "myPacts": "Mes Pactes"
+  },
+  "hero": {
+    "title": "Pacte Robot",
+    "subtitle": "Un protocole d'engagement en chaîne exécuté automatiquement avec des pénalités économiques",
+    "description": "Nous avons créé un arbitre robot qui aide les gens à surmonter la procrastination et à tenir leurs promesses grâce à des contrats intelligents immuables"
+  },
+  "features": {
+    "fastArbitration": {
+      "title": "Arbitrage Rapide",
+      "description": "Atteindre un arbitrage rapide et équitable grâce à des mécanismes de jeu en chaîne ingénieux"
+    },
+    "tamperProof": {
+      "title": "Anti-Falsification",
+      "description": "Basé sur des contrats intelligents, tous les engagements sont enregistrés sur la blockchain"
+    },
+    "economicIncentive": {
+      "title": "Incitation Économique",
+      "description": "Mécanisme de dépôt d'argent réel rend les engagements plus significatifs"
+    }
+  },
+  "create": {
+    "title": "Créer un Nouveau Pacte",
+    "connectWallet": {
+      "title": "Veuillez d'abord connecter votre portefeuille",
+      "description": "Connectez votre portefeuille pour créer votre premier pacte robot"
+    },
+    "form": {
+      "description": {
+        "label": "Contenu de l'Engagement",
+        "placeholder": "ex: Courir 30 minutes par jour, persister une semaine"
+      },
+      "opponent": {
+        "label": "Adresse de l'Adversaire",
+        "placeholder": "0x..."
+      },
+      "stake": {
+        "label": "Montant de la Mise (ETH)",
+        "placeholder": "0.01"
+      },
+      "duration": {
+        "label": "Durée (Jours)"
+      },
+      "submit": {
+        "create": "Créer le Pacte",
+        "creating": "Création..."
+      }
+    },
+    "warning": {
+      "title": "Avis Important",
+      "rule1": "Les deux parties doivent marquer 'terminé' avant la date limite pour récupérer leurs mises",
+      "rule2": "Si une seule partie termine, la partie terminée obtient les deux mises",
+      "rule3": "Si aucune partie ne termine, les mises seront brûlées"
+    }
+  },
+  "pacts": {
+    "title": "Mes Pactes",
+    "createNew": "Créer un Nouveau Pacte",
+    "connectWallet": {
+      "title": "Veuillez d'abord connecter votre portefeuille",
+      "description": "Connectez votre portefeuille pour voir votre liste de pactes"
+    },
+    "empty": {
+      "title": "Aucun Pacte Encore",
+      "description": "Créez votre premier pacte robot pour commencer à surmonter la procrastination",
+      "createButton": "Créer un Pacte"
+    },
+    "pact": {
+      "stake": "Mise",
+      "opponent": "Adversaire"
+    },
+    "status": {
+      "active": "Actif",
+      "pending": "En Attente de Résolution",
+      "resolved": "Résolu",
+      "expired": "Expiré"
+    },
+    "timeRemaining": {
+      "label": "Temps Restant",
+      "daysHours": "{days} jours {hours} heures",
+      "hours": "{hours} heures"
+    },
+    "progress": {
+      "creator": "Créateur",
+      "opponent": "Adversaire",
+      "completed": "✅ Terminé",
+      "inProgress": "⏳ En Cours"
+    },
+    "actions": {
+      "markComplete": "J'ai Terminé",
+      "markCompleteAlert": "Fonction de marquage comme terminé bientôt disponible !",
+      "resolve": "Résoudre le Pacte",
+      "resolveAlert": "Fonction de résolution de pacte bientôt disponible !"
+    }
+  },
+  "common": {
+    "connectWallet": "Connecter le Portefeuille",
+    "disconnect": "Déconnecter",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre"
+  }
+}

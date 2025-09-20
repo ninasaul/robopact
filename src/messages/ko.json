@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "RoboPact - 로봇 계약",
+    "description": "경제적 페널티가 있는 자동 실행 온체인 약속 프로토콜로, 불변의 스마트 계약을 통해 사람들이 미루기를 극복하고 약속을 지키도록 돕습니다."
+  },
+  "navigation": {
+    "createPact": "계약 생성",
+    "myPacts": "내 계약"
+  },
+  "hero": {
+    "title": "로봇 계약",
+    "subtitle": "경제적 페널티가 있는 자동 실행 온체인 약속 프로토콜",
+    "description": "불변의 스마트 계약을 통해 사람들이 미루기를 극복하고 약속을 지키도록 돕는 로봇 중재자를 만들었습니다"
+  },
+  "features": {
+    "fastArbitration": {
+      "title": "빠른 중재",
+      "description": "영리한 온체인 게임 메커니즘을 통해 빠르고 공정한 중재를 달성"
+    },
+    "tamperProof": {
+      "title": "변조 방지",
+      "description": "스마트 계약 기반으로 모든 약속이 블록체인에 기록됨"
+    },
+    "economicIncentive": {
+      "title": "경제적 인센티브",
+      "description": "실제 돈 예치 메커니즘이 약속을 더 의미 있게 만듦"
+    }
+  },
+  "create": {
+    "title": "새 계약 생성",
+    "connectWallet": {
+      "title": "먼저 지갑을 연결해주세요",
+      "description": "지갑을 연결하여 첫 번째 로봇 계약을 생성하세요"
+    },
+    "form": {
+      "description": {
+        "label": "약속 내용",
+        "placeholder": "예: 매일 30분 달리기, 1주일 지속"
+      },
+      "opponent": {
+        "label": "상대방 주소",
+        "placeholder": "0x..."
+      },
+      "stake": {
+        "label": "스테이크 금액 (ETH)",
+        "placeholder": "0.01"
+      },
+      "duration": {
+        "label": "기간 (일)"
+      },
+      "submit": {
+        "create": "계약 생성",
+        "creating": "생성 중..."
+      }
+    },
+    "warning": {
+      "title": "중요한 안내",
+      "rule1": "양쪽 당사자가 마감 시간 전에 '완료'를 표시해야 합니다",
+      "rule2": "한쪽만 완료하면 완료한 쪽이 양쪽 스테이크를 획득",
+      "rule3": "양쪽 모두 완료하지 않으면 스테이크가 소각됩니다"
+    }
+  },
+  "pacts": {
+    "title": "내 계약",
+    "createNew": "새 계약 생성",
+    "connectWallet": {
+      "title": "먼저 지갑을 연결해주세요",
+      "description": "지갑을 연결하여 계약 목록을 확인하세요"
+    },
+    "empty": {
+      "title": "아직 계약이 없습니다",
+      "description": "첫 번째 로봇 계약을 생성하여 미루기 극복을 시작하세요",
+      "createButton": "계약 생성"
+    },
+    "pact": {
+      "stake": "스테이크",
+      "opponent": "상대방"
+    },
+    "status": {
+      "active": "진행 중",
+      "pending": "해결 대기",
+      "resolved": "해결됨",
+      "expired": "만료됨"
+    },
+    "timeRemaining": {
+      "label": "남은 시간",
+      "daysHours": "{days}일 {hours}시간",
+      "hours": "{hours}시간"
+    },
+    "progress": {
+      "creator": "생성자",
+      "opponent": "상대방",
+      "completed": "✅ 완료",
+      "inProgress": "⏳ 진행 중"
+    },
+    "actions": {
+      "markComplete": "완료했습니다",
+      "markCompleteAlert": "완료 표시 기능이 곧 구현됩니다!",
+      "resolve": "계약 해결",
+      "resolveAlert": "계약 해결 기능이 곧 구현됩니다!"
+    }
+  },
+  "common": {
+    "connectWallet": "지갑 연결",
+    "disconnect": "연결 해제",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "cancel": "취소",
+    "confirm": "확인",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "편집",
+    "view": "보기",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "submit": "제출"
+  }
+}

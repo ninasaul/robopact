@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "RoboPact - ロボット契約",
+    "description": "経済的ペナルティを伴う自動実行型オンチェーンコミットメントプロトコル。不変のスマートコントラクトを通じて、人々が先延ばしを克服し、約束を守ることを支援します。"
+  },
+  "navigation": {
+    "createPact": "契約を作成",
+    "myPacts": "私の契約"
+  },
+  "hero": {
+    "title": "ロボット契約",
+    "subtitle": "経済的ペナルティを伴う自動実行型オンチェーンコミットメントプロトコル",
+    "description": "不変のスマートコントラクトを通じて、人々が先延ばしを克服し、約束を守ることを支援するロボット仲裁者を作成しました"
+  },
+  "features": {
+    "fastArbitration": {
+      "title": "高速仲裁",
+      "description": "巧妙なオンチェーンプレイメカニズムにより、迅速で公平な仲裁を実現"
+    },
+    "tamperProof": {
+      "title": "改ざん防止",
+      "description": "スマートコントラクトベースで、すべてのコミットメントがブロックチェーンに記録"
+    },
+    "economicIncentive": {
+      "title": "経済的インセンティブ",
+      "description": "実際の資金預託メカニズムにより、コミットメントをより意味のあるものに"
+    }
+  },
+  "create": {
+    "title": "新しい契約を作成",
+    "connectWallet": {
+      "title": "まずウォレットを接続してください",
+      "description": "ウォレットを接続して最初のロボット契約を作成しましょう"
+    },
+    "form": {
+      "description": {
+        "label": "コミットメント内容",
+        "placeholder": "例：毎日30分間走る、1週間継続"
+      },
+      "opponent": {
+        "label": "相手方アドレス",
+        "placeholder": "0x..."
+      },
+      "stake": {
+        "label": "ステーク金額 (ETH)",
+        "placeholder": "0.01"
+      },
+      "duration": {
+        "label": "期間 (日)"
+      },
+      "submit": {
+        "create": "契約を作成",
+        "creating": "作成中..."
+      }
+    },
+    "warning": {
+      "title": "重要な注意事項",
+      "rule1": "期限までに両方の当事者が「完了」をマークする必要があります",
+      "rule2": "一方のみが完了した場合、完了した方が両方のステークを獲得",
+      "rule3": "どちらも完了しなかった場合、ステークは焼却されます"
+    }
+  },
+  "pacts": {
+    "title": "私の契約",
+    "createNew": "新しい契約を作成",
+    "connectWallet": {
+      "title": "まずウォレットを接続してください",
+      "description": "ウォレットを接続して契約リストを表示しましょう"
+    },
+    "empty": {
+      "title": "まだ契約がありません",
+      "description": "最初のロボット契約を作成して、先延ばし克服を始めましょう",
+      "createButton": "契約を作成"
+    },
+    "pact": {
+      "stake": "ステーク",
+      "opponent": "相手方"
+    },
+    "status": {
+      "active": "進行中",
+      "pending": "解決待ち",
+      "resolved": "解決済み",
+      "expired": "期限切れ"
+    },
+    "timeRemaining": {
+      "label": "残り時間",
+      "daysHours": "{days}日{hours}時間",
+      "hours": "{hours}時間"
+    },
+    "progress": {
+      "creator": "作成者",
+      "opponent": "相手方",
+      "completed": "✅ 完了",
+      "inProgress": "⏳ 進行中"
+    },
+    "actions": {
+      "markComplete": "完了しました",
+      "markCompleteAlert": "完了マーク機能は近日実装予定です！",
+      "resolve": "契約を解決",
+      "resolveAlert": "契約解決機能は近日実装予定です！"
+    }
+  },
+  "common": {
+    "connectWallet": "ウォレットを接続",
+    "disconnect": "切断",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "view": "表示",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信"
+  }
+}

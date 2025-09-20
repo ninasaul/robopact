@@ -1,0 +1,147 @@
+{
+  "app": {
+    "title": "RoboPact - Robot Pact",
+    "description": "An automatically executed on-chain commitment protocol with economic penalties, helping people overcome procrastination and keep their promises through immutable smart contracts."
+  },
+  "navigation": {
+    "createPact": "Create Pact",
+    "myPacts": "My Pacts"
+  },
+  "hero": {
+    "title": "Robot Pact",
+    "subtitle": "An automatically executed on-chain commitment protocol with economic penalties",
+    "description": "We created a robot arbitrator that helps people overcome procrastination and keep their promises through immutable smart contracts"
+  },
+  "features": {
+    "fastArbitration": {
+      "title": "Fast Arbitration",
+      "description": "Achieve fast and fair arbitration through ingenious on-chain game mechanisms"
+    },
+    "tamperProof": {
+      "title": "Tamper-Proof",
+      "description": "Based on smart contracts, all commitments are recorded on the blockchain"
+    },
+    "economicIncentive": {
+      "title": "Economic Incentive",
+      "description": "Real money deposit mechanism makes commitments more meaningful"
+    }
+  },
+  "create": {
+    "title": "Create New Pact",
+    "connectWallet": {
+      "title": "Please Connect Wallet First",
+      "description": "Connect your wallet to create your first robot pact"
+    },
+    "form": {
+      "description": {
+        "label": "Commitment Content",
+        "placeholder": "e.g., Run for 30 minutes daily, persist for a week"
+      },
+      "opponent": {
+        "label": "Opponent Address",
+        "placeholder": "0x..."
+      },
+      "stake": {
+        "label": "Stake Amount (ETH)",
+        "placeholder": "0.01"
+      },
+      "duration": {
+        "label": "Duration (Days)"
+      },
+      "submit": {
+        "create": "Create Pact",
+        "creating": "Creating...",
+        "featureComingSoon": "Pact creation feature coming soon!"
+      }
+    },
+    "warning": {
+      "title": "Important Notice",
+      "rule1": "Both parties must mark 'completed' before the deadline to get their stakes back",
+      "rule2": "If only one party completes, the completed party gets both stakes",
+      "rule3": "If neither party completes, the stakes will be burned"
+    }
+  },
+  "pacts": {
+    "title": "My Pacts",
+    "createNew": "Create New Pact",
+    "connectWallet": {
+      "title": "Please Connect Wallet First",
+      "description": "Connect your wallet to view your pact list"
+    },
+    "empty": {
+      "title": "No Pacts Yet",
+      "description": "Create your first robot pact to start overcoming procrastination",
+      "createButton": "Create Pact"
+    },
+    "pact": {
+      "stake": "Stake",
+      "opponent": "Opponent"
+    },
+    "status": {
+      "active": "Active",
+      "pending": "Pending Resolution",
+      "resolved": "Resolved",
+      "expired": "Expired"
+    },
+    "timeRemaining": {
+      "label": "Time Remaining",
+      "daysHours": "{days} days {hours} hours",
+      "hours": "{hours} hours"
+    },
+    "progress": {
+      "creator": "Creator",
+      "opponent": "Opponent",
+      "completed": "✅ Completed",
+      "inProgress": "⏳ In Progress"
+    },
+    "actions": {
+      "markComplete": "I'm Done",
+      "markCompleteAlert": "Mark as complete feature coming soon!",
+      "resolve": "Resolve Pact",
+      "resolveAlert": "Resolve pact feature coming soon!"
+    },
+    "mockData": {
+      "example1": {
+        "description": "Run for 30 minutes every day for a week"
+      },
+      "example2": {
+        "description": "Complete project documentation writing"
+      }
+    }
+  },
+  "common": {
+    "connectWallet": "Connect Wallet",
+    "connectWalletShort": "Connect",
+    "disconnect": "Disconnect",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit"
+  },
+  "footer": {
+    "quickNavigation": "Quick Navigation",
+    "home": "Home",
+    "copyright": "© 2024 RoboPact. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contactUs": "Contact Us"
+  },
+  "connectButton": {
+    "wrongNetwork": "Wrong Network",
+    "wrongNetworkShort": "Wrong"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Current language: {currentLanguage}, click to switch language",
+    "switchingLanguage": "Switching language...",
+    "selectLanguage": "Select language"
+  }
+}

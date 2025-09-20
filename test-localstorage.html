@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Language Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { margin: 10px; padding: 10px 20px; }
+        .info { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>LocalStorage Language Test</h1>
+    
+    <div class="info">
+        <h3>Current localStorage value:</h3>
+        <p id="current-value">Loading...</p>
+    </div>
+    
+    <div class="info">
+        <h3>Test Actions:</h3>
+        <button onclick="setLanguage('zh')">Set Chinese (zh)</button>
+        <button onclick="setLanguage('en')">Set English (en)</button>
+        <button onclick="setLanguage('fr')">Set French (fr)</button>
+        <button onclick="setLanguage('ja')">Set Japanese (ja)</button>
+        <button onclick="setLanguage('ko')">Set Korean (ko)</button>
+        <button onclick="setLanguage('th')">Set Thai (th)</button>
+        <button onclick="clearLanguage()">Clear Language</button>
+    </div>
+    
+    <div class="info">
+        <h3>Simulate Language Switch:</h3>
+        <button onclick="simulateSwitch('en')">Switch to English</button>
+        <button onclick="simulateSwitch('zh')">Switch to Chinese</button>
+    </div>
+
+    <script>
+        function updateDisplay() {
+            const value = localStorage.getItem('NEXT_LOCALE');
+            document.getElementById('current-value').textContent = value || 'Not set';
+        }
+
+        function setLanguage(locale) {
+            localStorage.setItem('NEXT_LOCALE', locale);
+            updateDisplay();
+            console.log(`Set language to: ${locale}`);
+        }
+
+        function clearLanguage() {
+            localStorage.removeItem('NEXT_LOCALE');
+            updateDisplay();
+            console.log('Cleared language preference');
+        }
+
+        function simulateSwitch(newLocale) {
+            // 模拟语言切换器的行为
+            const currentPath = window.location.pathname;
+            const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}/, '') || '/';
+            
+            console.log(`Switching from ${localStorage.getItem('NEXT_LOCALE') || 'default'} to ${newLocale}`);
+            console.log(`Current path: ${currentPath}`);
+            console.log(`Path without locale: ${pathWithoutLocale}`);
+            
+            // 设置新的语言偏好
+            localStorage.setItem('NEXT_LOCALE', newLocale);
+            
+            // 构建新的 URL
+            const url = new URL(window.location.href);
+            url.pathname = pathWithoutLocale;
+            url.searchParams.set('locale', newLocale);
+            
+            console.log(`New URL would be: ${url.toString()}`);
+            updateDisplay();
+            
+            // 在实际应用中，这里会执行：
+            // window.location.href = url.toString();
+        }
+
+        // 初始化显示
+        updateDisplay();
+        
+        // 监听 localStorage 变化
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'NEXT_LOCALE') {
+                updateDisplay();
+            }
+        });
+    </script>
+</body>
+</html>
