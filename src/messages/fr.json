@@ -90,8 +90,8 @@
     "progress": {
       "creator": "Créateur",
       "opponent": "Adversaire",
-      "completed": "✅ Terminé",
-      "inProgress": "⏳ En Cours"
+      "completed": "Terminé",
+      "inProgress": "En Cours"
     },
     "actions": {
       "markComplete": "J'ai Terminé",
@@ -115,6 +115,23 @@
     "back": "Retour",
     "next": "Suivant",
     "previous": "Précédent",
-    "submit": "Soumettre"
+    "submit": "Soumettre",
+    "languageSwitcher": {
+      "ariaLabel": "Langue actuelle: {currentLanguage}, cliquer pour changer de langue",
+      "switchingLanguage": "Changement de langue...",
+      "selectLanguage": "Sélectionner une langue"
+    }
+  },
+  "footer": {
+    "quickNavigation": "Navigation rapide",
+    "home": "Accueil",
+    "copyright": "© 2024 RoboPact. Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "contactUs": "Nous contacter"
+  },
+  "connectButton": {
+    "wrongNetwork": "Réseau incorrect",
+    "wrongNetworkShort": "Incorrect"
   }
 }

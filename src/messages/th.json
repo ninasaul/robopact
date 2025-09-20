@@ -90,8 +90,8 @@
     "progress": {
       "creator": "ผู้สร้าง",
       "opponent": "คู่แข่ง",
-      "completed": "✅ เสร็จสิ้น",
-      "inProgress": "⏳ กำลังดำเนินการ"
+      "completed": "เสร็จสิ้น",
+      "inProgress": "กำลังดำเนินการ"
     },
     "actions": {
       "markComplete": "ฉันเสร็จแล้ว",
@@ -115,6 +115,23 @@
     "back": "กลับ",
     "next": "ถัดไป",
     "previous": "ก่อนหน้า",
-    "submit": "ส่ง"
+    "submit": "ส่ง",
+    "languageSwitcher": {
+      "ariaLabel": "ภาษาปัจจุบัน: {currentLanguage}, คลิกเพื่อเปลี่ยนภาษา",
+      "switchingLanguage": "กำลังเปลี่ยนภาษา...",
+      "selectLanguage": "เลือกภาษา"
+    }
+  },
+  "footer": {
+    "quickNavigation": "การนำทางด่วน",
+    "home": "หน้าแรก",
+    "copyright": "© 2024 RoboPact. สงวนลิขสิทธิ์ทั้งหมด",
+    "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+    "termsOfService": "ข้อกำหนดการบริการ",
+    "contactUs": "ติดต่อเรา"
+  },
+  "connectButton": {
+    "wrongNetwork": "เครือข่ายผิด",
+    "wrongNetworkShort": "ผิด"
   }
 }

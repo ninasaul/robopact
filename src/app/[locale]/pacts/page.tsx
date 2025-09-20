@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePactStore } from '@/store/pactStore';
 import { useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { getLocalizedPath } from '@/lib/routing';
 
 export default function PactsPage() {
   const { address, isConnected } = useAccount();
@@ -114,7 +115,7 @@ export default function PactsPage() {
               {t('pacts.title')}
             </h1>
             <Link
-              href={`/${locale}/create`}
+              href={getLocalizedPath('/create', locale)}
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
             >
               {t('pacts.createNew')}
@@ -123,7 +124,7 @@ export default function PactsPage() {
 
           {mockPacts.length === 0 ? (
             <div className="text-center py-12">
-              <div className="text-6xl mb-4">📝</div>
+              <div className="text-6xl mb-4 text-blue-500 font-bold">PACT</div>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 {t('pacts.empty.title')}
               </h2>
@@ -131,7 +132,7 @@ export default function PactsPage() {
                 {t('pacts.empty.description')}
               </p>
               <Link
-                href={`/${locale}/create`}
+                href={getLocalizedPath('/create', locale)}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 {t('pacts.empty.createButton')}

@@ -90,8 +90,8 @@
     "progress": {
       "creator": "作成者",
       "opponent": "相手方",
-      "completed": "✅ 完了",
-      "inProgress": "⏳ 進行中"
+      "completed": "完了",
+      "inProgress": "進行中"
     },
     "actions": {
       "markComplete": "完了しました",
@@ -115,6 +115,23 @@
     "back": "戻る",
     "next": "次へ",
     "previous": "前へ",
-    "submit": "送信"
+    "submit": "送信",
+    "languageSwitcher": {
+      "ariaLabel": "現在の言語: {currentLanguage}、クリックして言語を変更",
+      "switchingLanguage": "言語を変更中...",
+      "selectLanguage": "言語を選択"
+    }
+  },
+  "footer": {
+    "quickNavigation": "クイックナビゲーション",
+    "home": "ホーム",
+    "copyright": "© 2024 RoboPact. 全著作権所有。",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "contactUs": "お問い合わせ"
+  },
+  "connectButton": {
+    "wrongNetwork": "間違ったネットワーク",
+    "wrongNetworkShort": "間違い"
   }
 }

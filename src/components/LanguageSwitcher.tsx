@@ -7,12 +7,22 @@ import { useState, useTransition, useEffect, useRef, useCallback } from 'react';
 
 // 语言代码映射
 const localeCodes: Record<string, string> = {
-  en: 'EN',
+  en: 'US',
   fr: 'FR',
-  ja: 'JA',
-  ko: 'KO',
+  ja: 'JP',
+  ko: 'KR',
   th: 'TH',
-  zh: 'ZH'
+  zh: 'CN'
+};
+
+// 国旗图标映射 - 使用 jsdelivr CDN country-flag-icons 库
+const flagIcons: Record<string, string> = {
+  en: 'https://cdn.jsdelivr.net/npm/country-flag-icons@latest/flags/3x2/US.svg',
+  fr: 'https://cdn.jsdelivr.net/npm/country-flag-icons@latest/flags/3x2/FR.svg',
+  ja: 'https://cdn.jsdelivr.net/npm/country-flag-icons@latest/flags/3x2/JP.svg',
+  ko: 'https://cdn.jsdelivr.net/npm/country-flag-icons@latest/flags/3x2/KR.svg',
+  th: 'https://cdn.jsdelivr.net/npm/country-flag-icons@latest/flags/3x2/TH.svg',
+  zh: 'https://cdn.jsdelivr.net/npm/country-flag-icons@latest/flags/3x2/CN.svg'
 };
 
 export function LanguageSwitcher() {
@@ -128,6 +138,7 @@ export function LanguageSwitcher() {
 
   const currentLocaleName = localeNames[currentLocale as keyof typeof localeNames];
   const currentCode = localeCodes[currentLocale];
+  const currentFlagIcon = flagIcons[currentLocale];
 
   return (
     <div className="relative">
@@ -141,13 +152,14 @@ export function LanguageSwitcher() {
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           aria-label={t('languageSwitcher.ariaLabel', { currentLanguage: currentLocaleName })}
-          className="flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
         >
-          <span className="text-xs font-bold text-gray-500 dark:text-gray-400 px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">
-            {currentCode}
-          </span>
-          <span className="hidden sm:inline font-medium">{currentLocaleName}</span>
-          <span className="sm:hidden font-medium">{currentCode}</span>
+          <img 
+            src={currentFlagIcon} 
+            alt={`${currentLocaleName} flag`}
+            className="w-6 h-4 object-cover rounded-sm"
+            loading="lazy"
+          />
           
           {/* 加载状态 */}
           {isPending ? (
@@ -177,7 +189,7 @@ export function LanguageSwitcher() {
             <div className="py-1">
               {locales.map((loc) => {
                 const isSelected = loc === currentLocale;
-                const code = localeCodes[loc];
+                const flagIcon = flagIcons[loc];
                 const name = localeNames[loc];
                 
                 return (
@@ -197,9 +209,12 @@ export function LanguageSwitcher() {
                       isSelected ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' : 'text-gray-900 dark:text-white'
                     }`}
                   >
-                    <span className="text-xs font-bold text-gray-500 dark:text-gray-400 px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded min-w-[2rem] text-center">
-                      {code}
-                    </span>
+                    <img 
+                      src={flagIcon} 
+                      alt={`${name} flag`}
+                      className="w-6 h-4 object-cover rounded-sm"
+                      loading="lazy"
+                    />
                     <span className="flex-1 font-medium">{name}</span>
                     {isSelected && (
                       <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">

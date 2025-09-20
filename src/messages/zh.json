@@ -91,8 +91,8 @@
     "progress": {
       "creator": "创建者",
       "opponent": "对手方",
-      "completed": "✅ 已完成",
-      "inProgress": "⏳ 进行中"
+      "completed": "已完成",
+      "inProgress": "进行中"
     },
     "actions": {
       "markComplete": "我已完成",
@@ -125,7 +125,12 @@
     "back": "返回",
     "next": "下一步",
     "previous": "上一步",
-    "submit": "提交"
+    "submit": "提交",
+    "languageSwitcher": {
+      "ariaLabel": "当前语言: {currentLanguage}，点击切换语言",
+      "switchingLanguage": "正在切换语言...",
+      "selectLanguage": "选择语言"
+    }
   },
   "footer": {
     "quickNavigation": "快速导航",
@@ -138,10 +143,5 @@
   "connectButton": {
     "wrongNetwork": "错误网络",
     "wrongNetworkShort": "错误"
-  },
-  "languageSwitcher": {
-    "ariaLabel": "当前语言: {currentLanguage}，点击切换语言",
-    "switchingLanguage": "正在切换语言...",
-    "selectLanguage": "选择语言"
   }
 }

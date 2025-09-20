@@ -90,8 +90,8 @@
     "progress": {
       "creator": "생성자",
       "opponent": "상대방",
-      "completed": "✅ 완료",
-      "inProgress": "⏳ 진행 중"
+      "completed": "완료",
+      "inProgress": "진행 중"
     },
     "actions": {
       "markComplete": "완료했습니다",
@@ -115,6 +115,23 @@
     "back": "뒤로",
     "next": "다음",
     "previous": "이전",
-    "submit": "제출"
+    "submit": "제출",
+    "languageSwitcher": {
+      "ariaLabel": "현재 언어: {currentLanguage}, 클릭하여 언어 변경",
+      "switchingLanguage": "언어 변경 중...",
+      "selectLanguage": "언어 선택"
+    }
+  },
+  "footer": {
+    "quickNavigation": "빠른 탐색",
+    "home": "홈",
+    "copyright": "© 2024 RoboPact. 모든 권리 보유.",
+    "privacyPolicy": "개인정보 보호정책",
+    "termsOfService": "서비스 약관",
+    "contactUs": "문의하기"
+  },
+  "connectButton": {
+    "wrongNetwork": "잘못된 네트워크",
+    "wrongNetworkShort": "잘못됨"
   }
 }

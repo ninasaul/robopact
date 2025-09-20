@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
+import { getLocalizedPath } from '@/lib/routing';
 
 interface FooterProps {
   className?: string;
@@ -18,7 +19,7 @@ export function Footer({ className = '' }: FooterProps) {
           {/* 品牌信息 */}
           <div className="md:col-span-2">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              🤖 RoboPact
+              RoboPact
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
               {t('app.description')}
@@ -32,19 +33,19 @@ export function Footer({ className = '' }: FooterProps) {
             </h4>
             <nav className="space-y-2">
               <Link
-                href={`/${locale}`}
+                href={getLocalizedPath('/', locale)}
                 className="block text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {t('footer.home')}
               </Link>
               <Link
-                href={`/${locale}/create`}
+                href={getLocalizedPath('/create', locale)}
                 className="block text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {t('navigation.createPact')}
               </Link>
               <Link
-                href={`/${locale}/pacts`}
+                href={getLocalizedPath('/pacts', locale)}
                 className="block text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {t('navigation.myPacts')}
@@ -60,24 +61,15 @@ export function Footer({ className = '' }: FooterProps) {
               {t('footer.copyright')}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
-                href="#"
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-              >
+              <span className="text-sm text-gray-500 dark:text-gray-400">
                 {t('footer.privacyPolicy')}
-              </Link>
-              <Link
-                href="#"
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-              >
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
                 {t('footer.termsOfService')}
-              </Link>
-              <Link
-                href="#"
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-              >
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
                 {t('footer.contactUs')}
-              </Link>
+              </span>
             </div>
           </div>
         </div>

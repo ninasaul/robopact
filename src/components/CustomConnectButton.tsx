@@ -42,7 +42,7 @@ export function CustomConnectButton() {
                 return (
                   <button onClick={openConnectModal} type="button" className={buttonClassName}>
                     <span className="text-xs font-bold text-gray-500 dark:text-gray-400 px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">
-                      🔗
+                      CON
                     </span>
                     <span className="hidden sm:inline">{t('connectWallet')}</span>
                     <span className="sm:hidden">{t('connectWalletShort')}</span>
@@ -54,7 +54,7 @@ export function CustomConnectButton() {
                 return (
                   <button onClick={openChainModal} type="button" className={`${buttonClassName} border-red-300 dark:border-red-600 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20`}>
                     <span className="text-xs font-bold px-1.5 py-0.5 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded">
-                      ⚠️
+                      !
                     </span>
                     <span className="hidden sm:inline">{t('connectButton.wrongNetwork')}</span>
                     <span className="sm:hidden">{t('connectButton.wrongNetworkShort')}</span>
@@ -90,9 +90,14 @@ export function CustomConnectButton() {
                   </button>
                   
                   <button onClick={openAccountModal} type="button" className={buttonClassName}>
-                    <span className="text-xs font-bold text-gray-500 dark:text-gray-400 px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">
-                      👤
-                    </span>
+                    <div className="w-4 h-4 flex items-center justify-center">
+                      <img 
+                        src={`https://api.dicebear.com/7.x/identicon/svg?seed=${account.address}&backgroundColor=ff9500&size=16`}
+                        alt="Wallet"
+                        className="w-4 h-4 rounded-sm"
+                        loading="lazy"
+                      />
+                    </div>
                     <span className="hidden sm:inline">{account.displayName}</span>
                     <span className="sm:hidden">{account.displayName?.split(' ')[0]}</span>
                     {account.displayBalance && (
