@@ -73,20 +73,18 @@ export function LanguageSwitcher() {
         const currentPath = window.location.pathname;
         const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}/, '') || '/';
         
-        // 构建新的 URL
-        const url = new URL(window.location.href);
-        url.pathname = pathWithoutLocale;
-        url.searchParams.set('locale', newLocale);
+        // 直接构建新的路径，不使用 URL 参数
+        const newPath = `/${newLocale}${pathWithoutLocale}`;
         
-        // 使用 window.location.href 进行完整页面重定向
-        window.location.href = url.toString();
+        // 使用 router.push 进行客户端导航
+        router.push(newPath);
       } catch (error) {
         console.error('语言切换失败:', error);
       }
     });
     
     setIsOpen(false);
-  }, [currentLocale, isPending]);
+  }, [currentLocale, isPending, router]);
 
   // 键盘导航支持
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {

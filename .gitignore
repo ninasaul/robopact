@@ -41,6 +41,7 @@ out/
 cache/
 broadcast/
 lib/
+!src/lib/
 
 # IDE
 .vscode/

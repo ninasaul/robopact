@@ -25,8 +25,8 @@ export default function middleware(request: NextRequest) {
     // 语言检测策略：启用 cookie 检测
     localeDetection: true,
     
-    // 使用 as-needed 模式，默认语言不显示前缀
-    localePrefix: 'as-needed'
+    // 使用 always 模式，所有语言都显示前缀
+    localePrefix: 'always'
   });
 
   return intlMiddleware(request);
