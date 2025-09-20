@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useAccount, useWriteContract } from 'wagmi';
 import { CustomConnectButton } from '@/components/CustomConnectButton';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function CreatePact() {
   const { address, isConnected } = useAccount();
@@ -55,13 +56,26 @@ export default function CreatePact() {
 
   return (
     <div className="container mx-auto px-6 py-12">
-        <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        <div className="max-w-2xl mx-auto relative">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center z-20 relative">
             {t('create.title')}
           </h1>
 
-          <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-            <div className="space-y-6">
+          {/* Background Image - positioned behind form */}
+          <div className="absolute inset-0 opacity-30 dark:opacity-15 z-0">
+            <div className="w-full h-full transition-transform duration-700 ease-out hover:-translate-y-4">
+              <Image
+                src="/image-banner.png"
+                alt="Background"
+                fill
+                className="object-cover -translate-y-[20%]"
+                priority={false}
+              />
+            </div>
+          </div>
+
+          <form onSubmit={handleSubmit} className="relative bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm p-8 rounded-lg shadow-lg group">
+            <div className="space-y-6 relative z-10">
               <div>
                 <label htmlFor="description" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t('create.form.description.label')} *
