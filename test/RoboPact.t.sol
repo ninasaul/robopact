@@ -24,7 +24,11 @@ contract RoboPactTest is Test {
         uint256 stake = 0.01 ether;
         uint256 duration = 7 days;
 
-        roboPact.createPact{value: stake}("每天跑步30分钟", bob, duration);
+        roboPact.createPact{value: stake}(
+            unicode"每天跑步30分钟",
+            bob,
+            duration
+        );
 
         RoboPact.Pact memory pact = roboPact.getPact(1);
         assertEq(pact.creator, alice);
@@ -39,19 +43,27 @@ contract RoboPactTest is Test {
     function testCreatePactWithZeroStake() public {
         vm.prank(alice);
         vm.expectRevert("Stake must be greater than 0");
-        roboPact.createPact{value: 0}("每天跑步30分钟", bob, 7 days);
+        roboPact.createPact{value: 0}(unicode"每天跑步30分钟", bob, 7 days);
     }
 
     function testCreatePactWithSelf() public {
         vm.prank(alice);
         vm.expectRevert("Cannot create pact with yourself");
-        roboPact.createPact{value: 0.01 ether}("每天跑步30分钟", alice, 7 days);
+        roboPact.createPact{value: 0.01 ether}(
+            unicode"每天跑步30分钟",
+            alice,
+            7 days
+        );
     }
 
     function testMarkAsFinished() public {
         // 创建契约
         vm.prank(alice);
-        roboPact.createPact{value: 0.01 ether}("每天跑步30分钟", bob, 7 days);
+        roboPact.createPact{value: 0.01 ether}(
+            unicode"每天跑步30分钟",
+            bob,
+            7 days
+        );
 
         // 创建者标记完成
         vm.prank(alice);
@@ -73,7 +85,11 @@ contract RoboPactTest is Test {
     function testResolvePactBothFinished() public {
         // 创建契约
         vm.prank(alice);
-        roboPact.createPact{value: 0.01 ether}("每天跑步30分钟", bob, 1 days);
+        roboPact.createPact{value: 0.01 ether}(
+            unicode"每天跑步30分钟",
+            bob,
+            1 days
+        );
 
         // 双方都标记完成
         vm.prank(alice);
@@ -103,7 +119,11 @@ contract RoboPactTest is Test {
     function testResolvePactOnlyCreatorFinished() public {
         // 创建契约
         vm.prank(alice);
-        roboPact.createPact{value: 0.01 ether}("每天跑步30分钟", bob, 1 days);
+        roboPact.createPact{value: 0.01 ether}(
+            unicode"每天跑步30分钟",
+            bob,
+            1 days
+        );
 
         // 只有创建者标记完成
         vm.prank(alice);
@@ -129,7 +149,11 @@ contract RoboPactTest is Test {
     function testResolvePactOnlyOpponentFinished() public {
         // 创建契约
         vm.prank(alice);
-        roboPact.createPact{value: 0.01 ether}("每天跑步30分钟", bob, 1 days);
+        roboPact.createPact{value: 0.01 ether}(
+            unicode"每天跑步30分钟",
+            bob,
+            1 days
+        );
 
         // 只有对手方标记完成
         vm.prank(bob);
@@ -155,7 +179,11 @@ contract RoboPactTest is Test {
     function testResolvePactNeitherFinished() public {
         // 创建契约
         vm.prank(alice);
-        roboPact.createPact{value: 0.01 ether}("每天跑步30分钟", bob, 1 days);
+        roboPact.createPact{value: 0.01 ether}(
+            unicode"每天跑步30分钟",
+            bob,
+            1 days
+        );
 
         // 快进到过期时间
         vm.warp(block.timestamp + 1 days + 1);
@@ -182,13 +210,13 @@ contract RoboPactTest is Test {
     function testGetUserPacts() public {
         // 创建多个契约
         vm.prank(alice);
-        roboPact.createPact{value: 0.01 ether}("任务1", bob, 7 days);
+        roboPact.createPact{value: 0.01 ether}(unicode"任务1", bob, 7 days);
 
         vm.prank(bob);
-        roboPact.createPact{value: 0.02 ether}("任务2", charlie, 7 days);
+        roboPact.createPact{value: 0.02 ether}(unicode"任务2", charlie, 7 days);
 
         vm.prank(alice);
-        roboPact.createPact{value: 0.03 ether}("任务3", charlie, 7 days);
+        roboPact.createPact{value: 0.03 ether}(unicode"任务3", charlie, 7 days);
 
         // 获取 Alice 的契约
         uint256[] memory alicePacts = roboPact.getUserPacts(alice);
