@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
+import { Providers } from '../providers';
 
 type Props = {
   children: React.ReactNode;
@@ -35,14 +36,16 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex flex-col">
-      <NextIntlClientProvider messages={messages}>
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </NextIntlClientProvider>
-    </div>
+    <Providers>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-neutral-900 dark:to-neutral-800 flex flex-col">
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </NextIntlClientProvider>
+      </div>
+    </Providers>
   );
 }

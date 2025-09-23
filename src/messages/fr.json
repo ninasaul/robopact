@@ -111,6 +111,7 @@
   },
   "common": {
     "connectWallet": "Connecter le Portefeuille",
+    "connectWalletShort": "Connecter",
     "disconnect": "Déconnecter",
     "loading": "Chargement...",
     "error": "Erreur",
@@ -142,5 +143,12 @@
   "connectButton": {
     "wrongNetwork": "Réseau incorrect",
     "wrongNetworkShort": "Incorrect"
+  },
+  "theme": {
+    "light": "Mode Clair",
+    "dark": "Mode Sombre",
+    "system": "Suivre le Système",
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre"
   }
 }

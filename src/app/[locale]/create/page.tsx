@@ -79,10 +79,10 @@ export default function CreatePact() {
     return (
       <div className="container mx-auto px-6 py-20">
         <div className="max-w-md mx-auto text-center">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">
             {t("create.connectWallet.title")}
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-neutral-600 dark:text-neutral-300 mb-8">
             {t("create.connectWallet.description")}
           </p>
           <div className="flex justify-center">
@@ -96,7 +96,7 @@ export default function CreatePact() {
   return (
     <div className="container mx-auto px-6 py-12">
       <div className="max-w-2xl mx-auto relative">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center z-20 relative">
+        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8 text-center z-20 relative">
           {t("create.title")}
         </h1>
 
@@ -114,14 +114,14 @@ export default function CreatePact() {
 
         <form
           onSubmit={handleSubmit}
-          className="relative bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm p-8 rounded-lg shadow-lg group"
+          className="relative bg-white/30 dark:bg-neutral-800/30 backdrop-blur-sm p-8 rounded-lg shadow-lg group"
         >
           <div className="space-y-6 relative z-10">
             {/* Form fields remain the same */}
             <div>
               <label
                 htmlFor="description"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
               >
                 {t("create.form.description.label")} *
               </label>
@@ -132,7 +132,7 @@ export default function CreatePact() {
                 onChange={handleInputChange}
                 required
                 rows={4}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-700 dark:text-white"
                 placeholder={t("create.form.description.placeholder")}
               />
             </div>
@@ -140,7 +140,7 @@ export default function CreatePact() {
             <div>
               <label
                 htmlFor="opponent"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
               >
                 {t("create.form.opponent.label")} *
               </label>
@@ -151,7 +151,7 @@ export default function CreatePact() {
                 value={formData.opponent}
                 onChange={handleInputChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-700 dark:text-white"
                 placeholder={t("create.form.opponent.placeholder")}
               />
             </div>
@@ -160,7 +160,7 @@ export default function CreatePact() {
               <div>
                 <label
                   htmlFor="stake"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
                 >
                   {t("create.form.stake.label")} *
                 </label>
@@ -173,7 +173,7 @@ export default function CreatePact() {
                   required
                   min="0.001"
                   step="0.001"
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-700 dark:text-white"
                   placeholder={t("create.form.stake.placeholder")}
                 />
               </div>
@@ -181,7 +181,7 @@ export default function CreatePact() {
               <div>
                 <label
                   htmlFor="duration"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
                 >
                   {t("create.form.duration.label")} *
                 </label>
@@ -194,7 +194,7 @@ export default function CreatePact() {
                   required
                   min="1"
                   max="365"
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-700 dark:text-white"
                 />
               </div>
             </div>

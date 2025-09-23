@@ -87,7 +87,7 @@ export default function PactsPage() {
       case t('pacts.status.active'):
         return 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300';
       default:
-        return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-300';
+        return 'bg-neutral-100 text-neutral-800 dark:bg-neutral-900/20 dark:text-neutral-300';
     }
   };
 
@@ -95,10 +95,10 @@ export default function PactsPage() {
     return (
       <div className="container mx-auto px-6 py-20">
         <div className="max-w-md mx-auto text-center">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">
             {t('pacts.connectWallet.title')}
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-neutral-600 dark:text-neutral-300 mb-8">
             {t('pacts.connectWallet.description')}
           </p>
           <ConnectButton />
@@ -111,7 +111,7 @@ export default function PactsPage() {
     <div className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-between items-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
               {t('pacts.title')}
             </h1>
             <Link
@@ -125,10 +125,10 @@ export default function PactsPage() {
           {mockPacts.length === 0 ? (
             <div className="text-center py-12">
               <div className="text-6xl mb-4 text-blue-500 font-bold">PACT</div>
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">
                 {t('pacts.empty.title')}
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className="text-neutral-600 dark:text-neutral-300 mb-6">
                 {t('pacts.empty.description')}
               </p>
               <Link
@@ -146,13 +146,13 @@ export default function PactsPage() {
                 const isCreator = pact.creator.toLowerCase() === address?.toLowerCase();
                 
                 return (
-                  <div key={pact.id} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <div key={pact.id} className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-lg">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
                           {pact.description}
                         </h3>
-                        <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
+                        <div className="flex items-center space-x-4 text-sm text-neutral-600 dark:text-neutral-300">
                           <span>{t('pacts.pact.stake')}: {pact.stake} MON</span>
                           <span>•</span>
                           <span>{t('pacts.pact.opponent')}: {pact.opponent.slice(0, 6)}...{pact.opponent.slice(-4)}</span>
@@ -164,7 +164,7 @@ export default function PactsPage() {
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <div className="text-sm text-gray-600 dark:text-gray-300">
+                      <div className="text-sm text-neutral-600 dark:text-neutral-300">
                         {isExpired ? (
                           <span className="text-red-600 dark:text-red-400">{t('pacts.status.expired')}</span>
                         ) : (
@@ -201,7 +201,7 @@ export default function PactsPage() {
 
                     {/* 进度显示 */}
                     <div className="mt-4">
-                      <div className="flex justify-between text-sm text-gray-600 dark:text-gray-300 mb-2">
+                      <div className="flex justify-between text-sm text-neutral-600 dark:text-neutral-300 mb-2">
                         <span>{t('pacts.progress.creator')}: {pact.creatorFinished ? t('pacts.progress.completed') : t('pacts.progress.inProgress')}</span>
                         <span>{t('pacts.progress.opponent')}: {pact.opponentFinished ? t('pacts.progress.completed') : t('pacts.progress.inProgress')}</span>
                       </div>

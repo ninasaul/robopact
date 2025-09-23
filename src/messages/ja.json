@@ -111,6 +111,7 @@
   },
   "common": {
     "connectWallet": "ウォレットを接続",
+    "connectWalletShort": "接続",
     "disconnect": "切断",
     "loading": "読み込み中...",
     "error": "エラー",
@@ -142,5 +143,12 @@
   "connectButton": {
     "wrongNetwork": "間違ったネットワーク",
     "wrongNetworkShort": "間違い"
+  },
+  "theme": {
+    "light": "ライトモード",
+    "dark": "ダークモード",
+    "system": "システムに従う",
+    "switchToLight": "ライトモードに切り替え",
+    "switchToDark": "ダークモードに切り替え"
   }
 }

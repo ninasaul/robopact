@@ -111,6 +111,7 @@
   },
   "common": {
     "connectWallet": "เชื่อมต่อกระเป๋าเงิน",
+    "connectWalletShort": "เชื่อมต่อ",
     "disconnect": "ตัดการเชื่อมต่อ",
     "loading": "กำลังโหลด...",
     "error": "ข้อผิดพลาด",
@@ -142,5 +143,12 @@
   "connectButton": {
     "wrongNetwork": "เครือข่ายผิด",
     "wrongNetworkShort": "ผิด"
+  },
+  "theme": {
+    "light": "โหมดสว่าง",
+    "dark": "โหมดมืด",
+    "system": "ตามระบบ",
+    "switchToLight": "เปลี่ยนเป็นโหมดสว่าง",
+    "switchToDark": "เปลี่ยนเป็นโหมดมืด"
   }
 }

@@ -24,7 +24,7 @@ export function CustomConnectButton() {
           chain &&
           (!authenticationStatus || authenticationStatus === 'authenticated');
 
-        const buttonClassName = "flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer font-medium";
+        const buttonClassName = "flex items-center gap-2 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer font-medium";
 
         return (
           <div
@@ -41,7 +41,7 @@ export function CustomConnectButton() {
               if (!connected) {
                 return (
                   <button onClick={openConnectModal} type="button" className={buttonClassName}>
-                    <span className="text-xs font-bold text-gray-500 dark:text-gray-400 px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">
+                    <span className="text-xs font-bold text-neutral-500 dark:text-neutral-400 px-1.5 py-0.5 bg-neutral-100 dark:bg-neutral-700 rounded">
                       CON
                     </span>
                     <span className="hidden sm:inline">{t('connectWallet')}</span>
@@ -101,7 +101,7 @@ export function CustomConnectButton() {
                     <span className="hidden sm:inline">{account.displayName}</span>
                     <span className="sm:hidden">{account.displayName?.split(' ')[0]}</span>
                     {account.displayBalance && (
-                      <span className="hidden md:inline text-xs text-gray-500 dark:text-gray-400">
+                      <span className="hidden md:inline text-xs text-neutral-500 dark:text-neutral-400">
                         ({account.displayBalance})
                       </span>
                     )}

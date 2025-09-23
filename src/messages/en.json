@@ -152,5 +152,12 @@
   "connectButton": {
     "wrongNetwork": "Wrong Network",
     "wrongNetworkShort": "Wrong"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "system": "Follow System",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
   }
 }

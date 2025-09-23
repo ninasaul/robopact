@@ -5,6 +5,7 @@ import { useLocale } from 'next-intl';
 import { getLocalizedPath } from '@/lib/routing';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { CustomConnectButton } from './CustomConnectButton';
+import { ThemeToggle } from './ThemeToggle';
 
 interface HeaderProps {
   className?: string;
@@ -17,11 +18,12 @@ export function Header({ className = '' }: HeaderProps) {
     <header className={`flex justify-between items-center p-6 ${className}`}>
       <Link 
         href={getLocalizedPath('/', locale)} 
-        className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        className="text-2xl font-bold text-neutral-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
       >
         RoboPact
       </Link>
       <div className="flex items-center gap-4">
+        <ThemeToggle variant="icon" size="md" />
         <LanguageSwitcher />
         <CustomConnectButton />
       </div>

@@ -150,7 +150,7 @@ export function LanguageSwitcher() {
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           aria-label={t('languageSwitcher.ariaLabel', { currentLanguage: currentLocaleName })}
-          className="flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer font-medium"
+          className="flex items-center gap-2 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer font-medium"
         >
           <img 
             src={currentFlagIcon} 
@@ -161,7 +161,7 @@ export function LanguageSwitcher() {
           
           {/* 加载状态 */}
           {isPending ? (
-            <div className="w-4 h-4 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" role="status" aria-label={t('languageSwitcher.switchingLanguage')}></div>
+            <div className="w-4 h-4 border-2 border-neutral-300 border-t-blue-500 rounded-full animate-spin" role="status" aria-label={t('languageSwitcher.switchingLanguage')}></div>
           ) : (
             <svg
               className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
@@ -180,7 +180,7 @@ export function LanguageSwitcher() {
           <div 
             ref={menuRef}
             onKeyDown={handleMenuKeyDown}
-            className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50"
+            className="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 rounded-lg shadow-lg z-50"
             role="listbox"
             aria-label={t('languageSwitcher.selectLanguage')}
           >
@@ -203,8 +203,8 @@ export function LanguageSwitcher() {
                     disabled={isPending}
                     role="option"
                     aria-selected={isSelected}
-                    className={`w-full flex items-center gap-3 px-4 py-2 text-sm text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-700 ${
-                      isSelected ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' : 'text-gray-900 dark:text-white'
+                    className={`w-full flex items-center gap-3 px-4 py-2 text-sm text-left hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:bg-neutral-100 dark:focus:bg-neutral-700 ${
+                      isSelected ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' : 'text-neutral-900 dark:text-white'
                     }`}
                   >
                     <img 
